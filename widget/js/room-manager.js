@@ -21,7 +21,7 @@ var RoomManager = function () {
   button.addEventListener('click', this.onRefresh.bind(this), true);
   form.addEventListener('submit', this.onCreate.bind(this), true);
 
-  MashupPlatform.wiring.registerCallback('participantChange', this.onParticipantChange.bind(this));
+  MashupPlatform.wiring.registerCallback('participant', this.onParticipantChange.bind(this));
 };
 
 RoomManager.prototype.constructor = RoomManager;
@@ -85,7 +85,7 @@ RoomManager.prototype.onJoin = function (event) {
   event.preventDefault();
   event.stopPropagation();
 
-  MashupPlatform.wiring.pushEvent('join', this.username + ' ' + a.id);
+  MashupPlatform.wiring.pushEvent('join_room', this.username + ' ' + a.id);
 
 };
 

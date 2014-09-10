@@ -4,7 +4,7 @@
         <Vendor>CoNWeT</Vendor>
         <Name>room_manager</Name>
         <DisplayName>Chat Room Manager</DisplayName>
-        <Version>0.0.1</Version>
+        <Version>0.1.1</Version>
         <Author>bgrana</Author>
         <Mail>bgrana@conwet.com</Mail>
         <Description>A intuitive widget for managing chat rooms.</Description>
