@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns="http://wirecloud.conwet.fi.upm.es/ns/template#">
+    <Catalog.ResourceDescription>
+        <Vendor>CoNWeT</Vendor>
+        <Name>room_manager</Name>
+        <DisplayName>Chat Room Manager</DisplayName>
+        <Version>0.0.1</Version>
+        <Author>bgrana</Author>
+        <Mail>bgrana@conwet.com</Mail>
+        <Description>A intuitive widget for managing chat rooms.</Description>
+        <ImageURI>images/catalogue.png</ImageURI>
+        <iPhoneImageURI>images/catalogueSmartphone.png</iPhoneImageURI>
+        <WikiURI></WikiURI>
+    </Catalog.ResourceDescription>
+    <Platform.Preferences>
+    </Platform.Preferences>
+    <Platform.StateProperties>
+    </Platform.StateProperties>
+    <Platform.Wiring>
+        <OutputEndpoint name="join_room" type="text" label="New participant" description="Send participant username and room name." friendcode="join_room" />
+        <InputEndpoint name="participant" type="text" label="Participant join or leave room" description="A participant join or leave a room" friendcode="change_participant" />
+    </Platform.Wiring>
+    <Platform.Link>
+        <XHTML href="index.html" />
+    </Platform.Link>
+    <Platform.Rendering width="6" height="12"/>
+</Template>

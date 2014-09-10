@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="dist/css/room-manager-widget.min.css">
+    <!--https://rawgit.com/GoogleChrome/webrtc/master/samples/web/js/adapter.js -->
+    <script src="dist/js/room-manager-widget.js"></script>
+    <script>window.onload = function(){var manager = new RoomManager();};</script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <form id="create-room" class="navbar-form navbar-left">
+          <div class="input-group">
+            <input type="text" id="name" class="form-control" placeholder="Create room">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default">
+                <span class="fa fa-plus"></span>
+              </button>
+            </span>
+          </div><!-- /input-group -->
+        </form>
+        <button id="refresh" type="button" class="btn btn-default navbar-btn navbar-right">
+          <span class="fa fa-refresh"></span>
+        </button>
+      </div><!-- /.container-fluid -->
+    </div><!-- /.navbar -->
+    <div class="list-group"></div>
+  </body>
+</html>
