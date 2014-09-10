@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     banner: ' * @version <%= pkg.version %>\n' +
             ' * \n' +
             ' * @copyright 2014 <%= pkg.author %>\n' +
-            ' * @license <%= pkg.license.type %> (<%= pkg.license.type %>)\n' +
+            ' * @license <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */',
 
     concat: {
