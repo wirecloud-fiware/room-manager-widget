@@ -15,8 +15,9 @@ var RoomManager = function () {
   this.client = new RpcBuilder.clients.JsonRpcClient(this.url,
     this.onRequest.bind(this), this.onOpen.bind(this));
 
-  this.username = MashupPlatform.context.get('username');
-  this.rooms    = [];
+  this.username    = MashupPlatform.context.get('username');
+  this.rooms       = [];
+  this.active_room = '';
 
   button.addEventListener('click', this.onRefresh.bind(this), true);
   form.addEventListener('submit', this.onCreate.bind(this), true);
@@ -80,6 +81,7 @@ RoomManager.prototype.onJoin = function (event) {
     collection[i].className = 'list-group-item';
   }
 
+  this.active_room = a.id;
   a.className = 'list-group-item active';
 
   event.preventDefault();
@@ -140,7 +142,12 @@ RoomManager.prototype.refresh = function () {
 
     room.id = this.rooms[i];
     room.href = '';
-    room.className = 'list-group-item';
+    if (this.active_room && this.active_room === this.rooms[i]) {
+      room.className = 'list-group-item active';
+    }
+    else {
+      room.className = 'list-group-item';
+    }
     room.innerHTML = '<span class="fa fa-group fa-fw"></span>&nbsp; ' + this.rooms[i] +
                      '<span class="badge pull-right">' + this.rooms[i+1] + '</span>';
     room.addEventListener('click', this.onJoin.bind(this), true);
